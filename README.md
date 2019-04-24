@@ -9,7 +9,7 @@
 * [4. Example](#4-example)
 ## 1. License
 
-See the [LICENSE](../blob/master/LICENSE) file for license rights and limitations (AGPL-3.0).
+See the [LICENSE](LICENSE) file for license rights and limitations (AGPL-3.0).
 
 ## 2. Overview
 
