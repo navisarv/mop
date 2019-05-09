@@ -1,0 +1,30 @@
+buildscript {
+	ext{
+		springBootVersion = '2.1.4.RELEASE'
+	}
+	dependencies{
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath("com.github.navisarv:mop-gradle:1.0.3")
+	}
+    repositories {
+        mavenCentral()
+    }
+    
+}
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+apply plugin: 'eclipse'
+apply plugin: 'java'
+apply plugin: 'mop-gradle'
+
+repositories {
+        mavenCentral()
+    }
+
+dependencies {
+compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
+compile('com.github.navisarv:mop-javac:1.0.3')
+compile('com.github.navisarv:mop-appliance:1.0.1')
+compile('io.springfox:springfox-swagger2:2.9.2')
+compile('io.springfox:springfox-swagger-ui:2.9.2')
+}
