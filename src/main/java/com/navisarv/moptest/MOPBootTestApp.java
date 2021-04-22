@@ -15,8 +15,18 @@ public class MOPBootTestApp {
 		SpringApplication.run(MOPBootTestApp.class, args);
 	}
 
-	@PostMapping("/test")
-	public Employee postEmployee(Employee employee) {
+	@GetMapping(value="/test")
+	public Employee postEmployee() {
+		Employee employee = new Employee();
+		Name name = new Name();
+		name.setfName("fname");
+		name.setlName("lName");
+		employee.setName(name );
+		Address address = new Address();
+		ZipCode zip = new ZipCode();
+		zip.setZip5("zip5");
+		address.setZip(zip );
+		employee.setAddress(address );
 		return mapEmployee(employee);
 	}
 
